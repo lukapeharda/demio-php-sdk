@@ -1,2 +1,1 @@
-# demio-api-php-sdk
-Demio API PHP SDK
+# Demio API PHP SDK
