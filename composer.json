@@ -1,5 +1,6 @@
 {
   "name": "paintyourbrain/demio",
+  "version": "1.0",
   "title": "Demio API PHP SDK",
   "description": "Demio API PHP SDK",
   "type": "project",

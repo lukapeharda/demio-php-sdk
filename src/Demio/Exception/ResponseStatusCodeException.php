@@ -5,7 +5,8 @@
  */
 namespace Demio\Exception;
 
-class DemioException extends \Exception
+class ResponseStatusCodeException extends ExceptionAbstract
 {
+
 
 }

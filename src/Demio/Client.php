@@ -31,6 +31,11 @@ class Client extends Injectable
         $this->initProperties();
     }
 
+    public function call($endpoint, array $params = [], $method = 'GET')
+    {
+        return $this->getRequest()->call($endpoint, $params, $method);
+    }
+
     public function ping()
     {
         return $this->getRequest()->get('ping');

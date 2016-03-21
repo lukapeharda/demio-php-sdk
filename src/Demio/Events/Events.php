@@ -15,7 +15,7 @@ class Events extends Injectable
 {
 
     /**
-     * @return \Demio\Http\Response
+     * @return \Demio\Results
      */
     public function getList()
     {
@@ -24,16 +24,29 @@ class Events extends Injectable
 
     /**
      * @param $id
-     * @return \Demio\Http\Response
+     * @return \Demio\Results
      */
     public function getEvent($id)
     {
         return $this->getRequest()->get('event/' . $id);
     }
 
+    /**
+     * @param $id
+     * @param $date_id
+     * @return \Demio\Results
+     */
     public function getEventDate($id, $date_id)
     {
         return $this->getRequest()->get('event/' . $id . '/date/' . $date_id);
     }
 
+    /**
+     * @param $params
+     * @return \Demio\Results
+     */
+    public function register($params)
+    {
+        return $this->getRequest()->put('event/register', $params);
+    }
 }

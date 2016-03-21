@@ -20,12 +20,12 @@ $response = $client->ping();
 if ($response->isSuccess()) {
 
     // Success response. Dumping Contents
-    print_r($response->contents());
+    echo "pong = " . $response->results()->pong;
 
 } else {
 
     // Bad response. Dumping Http Status Code and Errors
     print_r($response->getStatusCode());
-    print_r($response->errorMessages());
+    print_r($response->getMessages());
 
 }

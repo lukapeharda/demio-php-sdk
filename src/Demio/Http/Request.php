@@ -6,6 +6,7 @@
 namespace Demio\Http;
 
 use Demio\Injectable;
+use Demio\Results;
 
 class Request extends Injectable
 {
@@ -15,7 +16,7 @@ class Request extends Injectable
      * @param $endpoint
      * @param array $params
      * @param string $method
-     * @return Response
+     * @return \Demio\Results
      */
     public function call($endpoint, array $params = [], $method = 'GET')
     {
@@ -31,12 +32,12 @@ class Request extends Injectable
             ],
             'body'    => json_encode($params)
         ]);
-        return new Response($response);
+        return new Results($response);
     }
 
     /**
      * @param $endpoint
-     * @return Response
+     * @return \Demio\Results
      */
     public function get($endpoint)
     {
@@ -46,7 +47,7 @@ class Request extends Injectable
     /**
      * @param $endpoint
      * @param $params
-     * @return Response
+     * @return \Demio\Results
      */
     public function post($endpoint, $params)
     {
@@ -56,7 +57,7 @@ class Request extends Injectable
     /**
      * @param $endpoint
      * @param $params
-     * @return Response
+     * @return \Demio\Results
      */
     public function put($endpoint, $params)
     {
@@ -66,7 +67,7 @@ class Request extends Injectable
     /**
      * @param $endpoint
      * @param $params
-     * @return Response
+     * @return \Demio\Results
      */
     public function delete($endpoint, $params)
     {
