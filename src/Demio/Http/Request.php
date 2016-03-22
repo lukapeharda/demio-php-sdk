@@ -10,7 +10,7 @@ use Demio\Results;
 
 class Request extends Injectable
 {
-    protected $base_uri = 'http://my.demio.loc/api/v1/';
+    protected $base_uri = 'https://my.demio.com/api/v1/';
 
     /**
      * @param $endpoint
