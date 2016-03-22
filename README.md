@@ -36,6 +36,8 @@ require 'vendor/autoload.php';
 
 ## Initialization
 
+You need login to your Demio Dashboard and get Api Key and Api Secret.
+
 ```php
 require 'vendor/autoload.php';
     
