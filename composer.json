@@ -4,7 +4,7 @@
   "title": "Demio API PHP SDK",
   "description": "Demio API PHP SDK",
   "type": "project",
-  "license": "proprietary",
+  "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
     "url": "https://github.com/oleksandr-torosh/demio-php-sdk"
