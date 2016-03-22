@@ -33,6 +33,6 @@ if ($register->isSuccess()) {
     echo "You has been registered<br>\n";
     echo "Your unique link to join <a href=\"$results->join_link\" target=\"_blank\">$results->join_link</a><br>\n";
 } else {
-    echo $register->getStatusCode(), "<br>\n";
+    echo $register->statusCode(), "<br>\n";
     echo "Errors: ", $register->implodeMessages('<br>'), "<br>\n";
 }

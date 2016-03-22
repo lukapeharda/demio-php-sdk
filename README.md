@@ -4,9 +4,9 @@ This PHP SDK are built for easier working with existing Demio REST API inside PH
 
 ## Requirements
 
-- php >= 5.5
-- composer
-- ext-curl
+- php >= 5.5  
+- composer  
+- ext-curl  
 
 ## Installation via Composer
 
@@ -45,8 +45,15 @@ $client = new \Demio\Client($api_key, $api_secret);
 
 ## Actions
 
-After Client initialization you are ready to work with existing methods
-Every action
+After Client initialization you are ready to work with existing methods.  
+Every action returns `\Demio\Results` object with next methods:
+- `isSuccess()` - boolean, check if response hasn't error messages  
+- `results($params)` - object, Returns response contents object  
+- `count()` - integer, if response contents is array returns it elements count  
+- `messages()` - array, error messages  
+- `implodeMessages($glue)` - string  
+- `statusCode()` - integer, response HTTP status code  
+- `getResponse()` - GuzzleHttp Response object  
 
 ### Ping
 

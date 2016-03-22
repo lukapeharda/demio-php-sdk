@@ -22,6 +22,6 @@ if ($response->isSuccess()) {
     echo "pong = " . $response->results()->pong;
 } else {
     // Errors
-    echo "Error " . $response->getStatusCode() . "<br>\n";
+    echo "Error " . $response->statusCode() . "<br>\n";
     echo $response->implodeMessages('<br>');
 }

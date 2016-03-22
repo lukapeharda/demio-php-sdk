@@ -18,24 +18,24 @@ class Results extends Injectable
 
     public function isSuccess()
     {
-        return (count($this->getMessages()) > 0) ? false : true;
+        return (count($this->messages()) > 0) ? false : true;
     }
 
     public function results(array $params = [])
     {
         $assoc = (isset($params['assoc'])) ? $params['assoc'] : false;
-        return $this->getContentsObject($assoc);
+        return $this->contentsObject($assoc);
     }
 
     public function count()
     {
-        $contents = $this->getContentsObject(true);
+        $contents = $this->contentsObject(true);
         return (is_array($contents)) ? count($contents) : 0;
     }
 
-    public function getMessages()
+    public function messages()
     {
-        $contents = $this->getContentsObject();
+        $contents = $this->contentsObject();
         if ($contents) {
             if (isset($contents->messages)) {
                 return $contents->messages;
@@ -46,15 +46,20 @@ class Results extends Injectable
 
     public function implodeMessages($glue = '<br>')
     {
-        return implode($glue, $this->getMessages());
+        return implode($glue, $this->messages());
     }
 
-    public function getStatusCode()
+    public function statusCode()
     {
         return $this->response->getStatusCode();
     }
 
-    private function getContentsObject($assoc = false)
+    public function getResponse()
+    {
+        return $this->response;
+    }
+
+    private function contentsObject($assoc = false)
     {
         return json_decode($this->contents, $assoc);
     }
