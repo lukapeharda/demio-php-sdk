@@ -4,9 +4,9 @@ This PHP SDK are built for easier working with existing Demio REST API inside PH
 
 ## Requirements
 
-+ php >= 5.5
-+ composer
-+ ext-curl
+- php >= 5.5
+- composer
+- ext-curl
 
 ## Installation via Composer
 
@@ -28,77 +28,92 @@ Alternatively, you can specify demio-php-sdk as a dependency in your project's e
 
 After installing, you need to require Composer's autoloader:
 
-    require 'vendor/autoload.php';
-
-You can find out more on how to install Composer, configure autoloading, and other best-practices for defining dependencies at [https://getcomposer.org](getcomposer.org).
+```php
+require 'vendor/autoload.php'; 
+```
 
 ## Initialization
 
-    require 'vendor/autoload.php';
+```php
+require 'vendor/autoload.php';
     
-    $api_key = 'IG8a1PUHxa49rn3q250LVVkF84p5w03L';
-    $api_secret = '1Wf20cConSV1zFiw';
+$api_key = 'IG8a1PUHxa49rn3q250LVVkF84p5w03L';
+$api_secret = '1Wf20cConSV1zFiw';
     
-    $client = new \Demio\Client($api_key, $api_secret);
+$client = new \Demio\Client($api_key, $api_secret);
+```
 
 ### Ping
 
-    $response = $client->ping();
-    echo $response->results()->pong;
+```php
+$response = $client->ping();
+echo $response->results()->pong;
+```
     
 ### Events list
 
-    $events = $client->events->getList();
-    if ($events->isSuccess()) {
-        if ($events->count() > 0) {
-            foreach ($events->results() as $event) {
-                echo "{$event->name} ({$event->id}) is {$event->status}<br>";
-            }
-        } else {
-            echo "Events not found<br>";
+```php
+$events = $client->events->getList();
+if ($events->isSuccess()) {
+    if ($events->count() > 0) {
+        foreach ($events->results() as $event) {
+            echo "{$event->name} ({$event->id}) is {$event->status}<br>";
         }
     } else {
-        echo "Errors: {$events->implodeMessages()}<br>";
+        echo "Events not found<br>";
     }
+} else {
+    echo "Errors: {$events->implodeMessages()}<br>";
+}
+```
     
 ### Register
 
-    $register = $client->events->register([
-        'id'    => 86, // Event ID
-        'name'  => 'John Doe',
-        'email' => 'john.doe.29@mailforspam.com'
-    ]);
-    
-    if ($register->isSuccess()) {
-        $results = $register->results();
-        $webinar_join_link = $results->join_link;
-    } else {
-        echo $register->getStatusCode(), "<br>";
-        echo "Errors: ", $register->implodeMessages('<br>');
-    }
+```php
+$register = $client->events->register([
+    'id'    => 86, // Event ID
+    'name'  => 'John Doe',
+    'email' => 'john.doe.29@mailforspam.com'
+]);
+
+if ($register->isSuccess()) {
+    $results = $register->results();
+    $webinar_join_link = $results->join_link;
+} else {
+    echo $register->getStatusCode(), "<br>";
+    echo "Errors: ", $register->implodeMessages('<br>');
+}
+```
     
 ### Register for specified Date
 
-    $register = $client->events->register([
-            'id'      => 86, // Event ID
-            'date_id' => 1567 // Date ID
-            'name'    => 'John Doe',
-            'email'   => 'john.doe.29@mailforspam.com'
-    ]);
+```php
+$register = $client->events->register([
+        'id'      => 86, // Event ID
+        'date_id' => 1567 // Date ID
+        'name'    => 'John Doe',
+        'email'   => 'john.doe.29@mailforspam.com'
+]);
+```
     
 ### Register via Registration page link
 
-    $register = $client->events->register([
-        'ref_url' => 'http://my.demio.com/ref/7Ka0Ti56GdIWcfFR',
-        'name'    => 'John Doe',
-        'email'   => 'john.doe.29@mailforspam.com'
-    ]);
+```php
+$register = $client->events->register([
+    'ref_url' => 'http://my.demio.com/ref/7Ka0Ti56GdIWcfFR',
+    'name'    => 'John Doe',
+    'email'   => 'john.doe.29@mailforspam.com'
+]);
+```
     
 ### Single Event details
 
-    $event = $client->events->getEvent(86);
+```php
+$event = $client->events->getEvent(86);
+```
     
 ### Getting results as associative array
     
-    $events->results(['assoc' => true]);
-    
+```php
+$events->results(['assoc' => true]);
+```
