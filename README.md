@@ -106,7 +106,7 @@ if ($register->isSuccess()) {
 ```php
 $register = $client->events->register([
     'id'      => 86, // Event ID
-    'date_id' => 1567, // Date ID
+    'date_id' => 1575, // Date ID
     'name'    => 'John Doe',
     'email'   => 'john.doe.29@mailforspam.com'
 ]);
