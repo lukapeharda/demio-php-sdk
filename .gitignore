@@ -1,6 +1,5 @@
 .idea/
 vendor/
-tmp/
 
 composer.lock
 index.html

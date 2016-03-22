@@ -96,7 +96,7 @@ if ($register->isSuccess()) {
     $results = $register->results();
     $webinar_join_link = $results->join_link;
 } else {
-    echo $register->getStatusCode(), "<br>";
+    echo $register->statusCode(), "<br>";
     echo "Errors: ", $register->implodeMessages('<br>');
 }
 ```
