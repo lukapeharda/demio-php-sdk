@@ -18,13 +18,13 @@ The recommended way to install Demio API PHP SDK is with [Composer](http://getco
 
 You can add Demio API PHP SDK as a dependency using the composer.phar CLI:
 
-    php composer.phar require oleksandr-torosh/demio-php-sdk:~1.0
+    php composer.phar require oleksandr-torosh/demio-php-sdk:1.0
 
 Alternatively, you can specify demio-php-sdk as a dependency in your project's existing **composer.json** file:
 
     {  
         "require": {  
-            "oleksandr-torosh/demio-php-sdk": "~1.0"  
+            "oleksandr-torosh/demio-php-sdk": "1.0"  
         }  
     }  
 
