@@ -1,5 +1,7 @@
 # Demio API PHP SDK
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/?branch=master)
+
 This PHP SDK are built for easier working with existing Demio REST API inside PHP projects.
 
 ## Requirements
@@ -51,7 +53,7 @@ Every action returns `\Demio\Results` object with next methods:
 - `results($params)` - object, Returns response contents object  
 - `count()` - integer, if response contents is array returns it elements count  
 - `messages()` - array, error messages  
-- `implodeMessages($glue)` - string  
+- `implodeMessages($glue)` - string, concat errors messages array in one string with defined glue
 - `statusCode()` - integer, response HTTP status code  
 - `getResponse()` - GuzzleHttp Response object  
 
