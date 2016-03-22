@@ -30,4 +30,6 @@ if ($event->isSuccess()) {
     } else {
         echo "Event not found<br>\n";
     }
+} else {
+    echo "Errors: {$event->implodeMessages()}<br>\n";
 }

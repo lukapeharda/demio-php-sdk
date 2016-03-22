@@ -7,8 +7,8 @@
 require '../vendor/autoload.php';
 
 // Api Key and Secret
-$api_key = 'IG8a1PUHxa49rn3q250LVVkF84p5w03L';
-$api_secret = '1Wf20cConSV1zFiw';
+$api_key = 'HD2MUQaScuajohrm2ccXlqj69zMWQ0uB';
+$api_secret = '4Jkz9HMeI8HgS';
 
 // Demio Client initialization
 $client = new \Demio\Client($api_key, $api_secret);
