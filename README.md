@@ -116,7 +116,7 @@ $register = $client->events->register([
 
 ```php
 $register = $client->events->register([
-    'ref_url' => 'http://my.demio.com/ref/7Ka0Ti56GdIWcfFR',
+    'ref_url' => 'https://my.demio.com/ref/nI7XKRaVfZdj9CyQ',
     'name'    => 'John Doe',
     'email'   => 'john.doe.29@mailforspam.com'
 ]);
