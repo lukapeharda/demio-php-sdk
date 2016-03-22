@@ -24,7 +24,7 @@ if ($event->isSuccess()) {
         if (count($eventEntity->dates) > 0) {
             foreach ($eventEntity->dates as $date) {
                 $dateTime = (new \DateTime('@' . $date->timestamp))->setTimezone(new \DateTimeZone($date->zone));
-                echo "Date_id <b>{$date->date_id}</b> is {$date->status} for {$dateTime->format('D, F jS g:i A T')}.\n";
+                echo "Date_id <b>{$date->date_id}</b> is {$date->status} for {$dateTime->format('l, F jS g:i A T')}<br>\n";
             }
         }
     } else {

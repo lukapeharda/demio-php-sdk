@@ -21,8 +21,9 @@ class Results extends Injectable
         return (count($this->getMessages()) > 0) ? false : true;
     }
 
-    public function results($assoc = false)
+    public function results(array $params = [])
     {
+        $assoc = (isset($params['assoc'])) ? $params['assoc'] : false;
         return $this->getContentsObject($assoc);
     }
 
@@ -43,7 +44,7 @@ class Results extends Injectable
         return [];
     }
 
-    public function implodeMessages($glue)
+    public function implodeMessages($glue = '<br>')
     {
         return implode($glue, $this->getMessages());
     }

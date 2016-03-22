@@ -18,14 +18,10 @@ $response = $client->ping();
 
 // Handling Response
 if ($response->isSuccess()) {
-
-    // Success response. Dumping Contents
+    // Success response
     echo "pong = " . $response->results()->pong;
-
 } else {
-
-    // Bad response. Dumping Http Status Code and Errors
-    print_r($response->getStatusCode());
-    print_r($response->getMessages());
-
+    // Errors
+    echo "Error " . $response->getStatusCode() . "<br>\n";
+    echo $response->implodeMessages('<br>');
 }

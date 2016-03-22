@@ -27,5 +27,5 @@ if ($events->isSuccess()) {
         echo "Events not found<br>\n";
     }
 } else {
-    echo "Errors: ", implode('<br>', $events->getMessages()), "<br>\n";
+    echo "Errors: {$events->implodeMessages()}<br>\n";
 }
