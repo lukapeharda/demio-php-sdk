@@ -43,6 +43,11 @@ $api_secret = '1Wf20cConSV1zFiw';
 $client = new \Demio\Client($api_key, $api_secret);
 ```
 
+## Actions
+
+After Client initialization you are ready to work with existing methods
+Every action
+
 ### Ping
 
 ```php
@@ -51,6 +56,8 @@ echo $response->results()->pong;
 ```
     
 ### Events list
+
+Work with Events is carried out through property **events**
 
 ```php
 $events = $client->events->getList();
@@ -89,10 +96,10 @@ if ($register->isSuccess()) {
 
 ```php
 $register = $client->events->register([
-        'id'      => 86, // Event ID
-        'date_id' => 1567 // Date ID
-        'name'    => 'John Doe',
-        'email'   => 'john.doe.29@mailforspam.com'
+    'id'      => 86, // Event ID
+    'date_id' => 1567 // Date ID
+    'name'    => 'John Doe',
+    'email'   => 'john.doe.29@mailforspam.com'
 ]);
 ```
     
@@ -117,3 +124,7 @@ $event = $client->events->getEvent(86);
 ```php
 $events->results(['assoc' => true]);
 ```
+
+## Examples
+
+You can find more examples inside **examples** directory
