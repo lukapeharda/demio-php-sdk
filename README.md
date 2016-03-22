@@ -1,5 +1,6 @@
 # Demio API PHP SDK
 
+[![Build Status](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/badges/build.png?b=master)](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/?branch=master)
 
 This PHP SDK are built for easier working with existing Demio REST API inside PHP projects.
