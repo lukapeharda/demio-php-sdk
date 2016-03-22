@@ -137,6 +137,19 @@ $event = $client->events->getEvent(86);
 $events->results(['assoc' => true]);
 ```
 
+### Plain Demio API call
+
+```php
+$client->call($endpoint, $params, $method);
+```
+
+Getting events list via plain call
+
+```php
+$events = $client->call('events', [], 'GET');
+var_dump($events->results());
+```
+
 ## Examples
 
 You can find more examples inside **examples** directory
