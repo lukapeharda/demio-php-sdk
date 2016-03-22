@@ -1,7 +1,7 @@
 # Demio API PHP SDK
 
-[![Build Status](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/badges/build.png?b=master)](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/oleksandr-torosh/demio-php-sdk/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/meetdemio/demio-php-sdk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/meetdemio/demio-php-sdk/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/meetdemio/demio-php-sdk/badges/build.png?b=master)](https://scrutinizer-ci.com/g/meetdemio/demio-php-sdk/build-status/master)
 
 This PHP SDK are built for easier working with existing Demio REST API inside PHP projects.
 
@@ -19,13 +19,13 @@ The recommended way to install Demio API PHP SDK is with [Composer](http://getco
 
 You can add Demio API PHP SDK as a dependency using the composer.phar CLI:
 
-    php composer.phar require oleksandr-torosh/demio-php-sdk:1.0
+    php composer.phar require meetdemio/demio-php-sdk:1.0
 
 Alternatively, you can specify demio-php-sdk as a dependency in your project's existing **composer.json** file:
 
     {  
         "require": {  
-            "oleksandr-torosh/demio-php-sdk": "1.0"  
+            "meetdemio/demio-php-sdk": "1.0"  
         }  
     }  
 
