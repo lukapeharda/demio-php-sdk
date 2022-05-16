@@ -21,7 +21,7 @@ class Request extends Injectable
     public function call($endpoint, array $params = [], $method = 'GET')
     {
         $client = new \GuzzleHttp\Client([
-            'exceptions' => false,
+            'http_errors' => false,
             'verify'     => false
         ]);
         $response = $client->request($method, $this->base_uri . $endpoint, [
